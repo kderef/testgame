@@ -42,12 +42,13 @@
 # ----------------------
 
 cmake_minimum_required(VERSION 3.14)
+set(CMAKE_CXX_COMPILER_WORKS 1) # STupid fucking
 
 project(
     game # Application's name;
     VERSION 1.0 # Application's version;
     DESCRIPTION "Simple C template for Raylib" # Application's description;
-    HOMEPAGE_URL "https://github.com/itsYakub/Simple-Raylib-Template.git" # Application's URL Page (i.e. GitHub repository)
+    # HOMEPAGE_URL "https://github.com/itsYakub/Simple-Raylib-Template.git" # Application's URL Page (i.e. GitHub repository)
     LANGUAGES C # Application's primary language
 )
 
@@ -66,7 +67,7 @@ include(FetchContent)
 FetchContent_Declare(
     raylib
     GIT_REPOSITORY https://github.com/raysan5/raylib.git
-    GIT_TAG 5.0
+    GIT_TAG 5.5
 )
 
 FetchContent_MakeAvailable(raylib)
