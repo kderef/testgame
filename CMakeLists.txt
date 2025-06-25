@@ -43,6 +43,8 @@
 
 cmake_minimum_required(VERSION 3.14)
 set(CMAKE_CXX_COMPILER_WORKS 1) # STupid fucking
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_C_COMPILER "gcc")
 
 project(
     game # Application's name;

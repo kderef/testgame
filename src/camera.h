@@ -2,7 +2,11 @@
 #include "rcamera.h"
 
 
-void camera_look(Camera3D* camera) {
+void camera_look(Camera2D* camera) {
+    
+}
+
+void camera_look_3d(Camera3D* camera) {
     Vector2 mousePositionDelta = GetMouseDelta();
     
     #define CAMERA_MOVE_SPEED                               5.4f       // Units per second
