@@ -1,2 +1,2 @@
 -I
-bin/_deps/raylib-src/src/
+../bin/_deps/raylib-src/src/

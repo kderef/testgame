@@ -16,12 +16,12 @@ static bool log_to_file = true;
 static FILE* log_file = NULL;
 
 // logging macros
-#define info(FMT, ...) TraceLog(LOG_INFO, FMT, #__VA_ARGS__)
-#define warn(FMT, ...) TraceLog(LOG_WARNING, FMT, #__VA_ARGS__)
-#define error(FMT, ...) TraceLog(LOG_ERROR, FMT, #__VA_ARGS__)
-#define fatal(FMT, ...) TraceLog(LOG_FATAL, FMT, #__VA_ARGS__)
-#define trace(FMT, ...) TraceLog(LOG_TRACE, FMT, #__VA_ARGS__)
-#define debug(FMT, ...) TraceLog(LOG_DEBUG, "\033[4m" STR(__FILE_NAME__) "@" STR(__LINE__) "\033[24m: " FMT, #__VA_ARGS__)
+#define info(FMT, ...) TraceLog(LOG_INFO, FMT, ##__VA_ARGS__)
+#define warn(FMT, ...) TraceLog(LOG_WARNING, FMT, ##__VA_ARGS__)
+#define error(FMT, ...) TraceLog(LOG_ERROR, FMT, ##__VA_ARGS__)
+#define fatal(FMT, ...) TraceLog(LOG_FATAL, FMT, ##__VA_ARGS__)
+#define trace(FMT, ...) TraceLog(LOG_TRACE, FMT, ##__VA_ARGS__)
+#define debug(FMT, ...) TraceLog(LOG_DEBUG, "\033[4m" STR(__FILE_NAME__) "@" STR(__LINE__) "\033[24m: " FMT, ##__VA_ARGS__)
 
 struct LogLevelData {
     const char* prefix;
