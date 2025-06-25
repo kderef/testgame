@@ -1,0 +1,19 @@
+[package]
+name = "testgame"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[profile.dev]
+incremental = true
+package = { "*" = {opt-level = 3} }
+
+[profile.release]
+lto = true
+opt-level = 3
+
+[dependencies]
+ggez = "0.9.3"
+
+[build-dependencies]
+static_vcruntime = "2.0.0"

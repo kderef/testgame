@@ -1,2 +1,0 @@
--I
-../bin/_deps/raylib-src/src/

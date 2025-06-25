@@ -34,3 +34,8 @@
 # Binary directories
 /bin/
 /build/
+
+
+# Added by cargo
+
+/target
